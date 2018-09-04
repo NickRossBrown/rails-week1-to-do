@@ -13,12 +13,9 @@
  *= require_tree .
  *= require_self
  */
-/* a {
-  font-family: sans-serif;
-}
-h1 {
-  font-family: sans-serif;
-} */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 p  {
   font-size: 14px;
 
@@ -31,11 +28,20 @@ li {
 }
 
 body {
-  background-color: lightblue;
+  background-color: rgb(245, 245, 245);
   font-family: sans-serif;
 }
 
 .strikeThrough {
   text-decoration: line-through;
   color: blue;
+}
+
+.imgtag {
+  float: left;
+  margin-right: 30px;
+}
+
+a {
+  color: white;
 }

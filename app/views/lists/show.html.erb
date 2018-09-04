@@ -1,3 +1,4 @@
+<% content_for(:title, "List | To Do") %>
 <h1><%= @list.name %></h1>
 
 <% if @list.tasks.any? %>
@@ -6,9 +7,9 @@
   <ul>
     <% @list.tasks.each do |task| %>
         <% if task.done != true %>
-          <li><%= task.description %>  
-          <button><%= link_to "Edit", edit_list_task_path(@list, task) %></button>  
-          <button><%= link_to "Delete", list_task_path(@list, task),
+          <li><%= task.description %>
+          <button class="btn btn-success"><%= link_to "Edit", edit_list_task_path(@list, task) %></button>
+          <button class="btn btn-danger"><%= link_to "Delete", list_task_path(@list, task),
                                    :data => {:confirm => "Are you sure?",
                                                     :method => "delete"} %></button>
         <% end %>
@@ -16,8 +17,8 @@
 
         <% if task.done === true %>
         <li class="strikeThrough">Done <%= task.description %>
-          <button><%= link_to "Edit", edit_list_task_path(@list, task) %></button>  
-          <button><%= link_to "Delete", list_task_path(@list, task),
+          <button class="btn btn-success"><%= link_to "Edit", edit_list_task_path(@list, task) %></button>
+          <button class="btn btn-danger"><%= link_to "Delete", list_task_path(@list, task),
                                    :data => {:confirm => "Are you sure?",
                                                     :method => "delete"} %></button>
         <% end %>
@@ -28,9 +29,9 @@
   <p>There are no tasks yet!</p>
 <% end %>
 
-<button><p><%= link_to "Add a task", new_list_task_path(@list) %></p></button>
-<button><p><%= link_to "Delete List", list_path(@list),
+<button class="btn btn-success"><p><%= link_to "Add a task", new_list_task_path(@list) %></p></button>
+<button class="btn btn-danger"><p><%= link_to "Delete List", list_path(@list),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p></button>
 
-<button><p><%= link_to "Return to lists", lists_path %></p></button>
+<button class="btn btn-info"><p><%= link_to "Return to lists", lists_path %></p></button>
