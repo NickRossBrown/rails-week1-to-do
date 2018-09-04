@@ -13,23 +13,29 @@
  *= require_tree .
  *= require_self
  */
-a {
+/* a {
   font-family: sans-serif;
 }
 h1 {
   font-family: sans-serif;
-}
+} */
 p  {
-  font-size: 20px;
-  font-family: sans-serif;
+  font-size: 14px;
+
 }
 
 li {
   font-size: 20px;
-  font-family: sans-serif;
+
 
 }
 
 body {
   background-color: lightblue;
+  font-family: sans-serif;
+}
+
+.strikeThrough {
+  text-decoration: line-through;
+  color: blue;
 }
