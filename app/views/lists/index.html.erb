@@ -2,10 +2,11 @@
 
 <ul>
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
+    <button class="btn btn-primary"><p><%= link_to list.name, list_path(list) %></p></button>
+    <br>
   <% end %>
 </ul>
 
 <hr>
 
-<%= link_to "New List", new_list_path %>
+<button class="btn btn-warning"> <%= link_to "New List", new_list_path %></button>
